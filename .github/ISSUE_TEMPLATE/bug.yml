@@ -1,0 +1,75 @@
+name: 问题反馈
+description: 客户端出现错误、闪退、无法播放等问题
+title: "[问题] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈！请**不要**填写手机号、身份证号、账号密码、课程激活码等个人信息，截图前请遮挡这些内容。
+  - type: input
+    id: version
+    attributes:
+      label: 客户端版本
+      description: 「个人中心 → 关于」中可以看到，例如 1.1.1
+      placeholder: "1.1.1"
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: 操作系统
+      options:
+        - Windows 11
+        - Windows 10
+        - macOS（Apple 芯片）
+        - macOS（Intel 芯片）
+        - Linux
+        - 其它
+    validations:
+      required: true
+  - type: dropdown
+    id: role
+    attributes:
+      label: 使用身份
+      options:
+        - 学员
+        - 讲师
+        - 教务 / 管理员
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: 问题所在功能
+      options:
+        - 安装 / 更新
+        - 登录 / 实名 / 人脸核验
+        - 直播观看
+        - 回放
+        - 互动评论
+        - 课程资料
+        - 推流（讲师）
+        - 其它
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: 问题描述
+      description: 发生了什么？你期望的结果是什么？
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      placeholder: |
+        1. 打开某课程
+        2. 点击「进入直播」
+        3. 画面一直加载
+  - type: textarea
+    id: extra
+    attributes:
+      label: 截图 / 其它信息
+      description: 可直接粘贴截图。推流问题可附上日志（Windows：%APPDATA%\Trackform Live\logs）。

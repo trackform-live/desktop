@@ -1,0 +1,27 @@
+name: 功能建议
+description: 希望新增或改进的功能
+title: "[建议] "
+labels: [enhancement]
+body:
+  - type: dropdown
+    id: role
+    attributes:
+      label: 使用身份
+      options:
+        - 学员
+        - 讲师
+        - 教务 / 管理员
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 遇到的不便
+      description: 现在哪里不方便？在什么场景下？
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: 希望的样子
+      description: 你希望它怎样工作？可以附上截图或参考。
